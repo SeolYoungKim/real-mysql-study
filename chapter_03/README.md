@@ -237,4 +237,3 @@ set global activate_all_roles_on_login=on;
 - MySQL 서버 내부적으로 역할과 계정은 동일한 객체로 취급 됨 
   - 하나의 사용자 계정에 다른 사용자 계정이 가진 권한을 병합해서 권한 제어가 가능해졌을 뿐 
   - 역할은 account_locked 필드가 Y임 
-  - 
