@@ -1,6 +1,7 @@
 # 엔진 아키텍처
 - 엔진 : MySQL 쿼리를 작성하고 튜닝할 때 필요
-  ![img.png](img.png)
+
+![img.png](img.png)
 
 ### MySQL 엔진
 - 요청된 SQL 문장을 분석하거나 최적화하는 등 DBMS의 두뇌에 해당하는 처리 수행
@@ -30,6 +31,7 @@ create table test_table (fd1 int, fd2 int) engine=innodb;
 
 
 - 핸들러 API를 통해 얼마나 많은 데이터(레코드) 작업이 있었는지는 아래와 같이 확인 가능
+
 ![img_1.png](img_1.png)
 
 <br>
@@ -247,7 +249,8 @@ create table test_table (fd1 int, fd2 int) engine=innodb;
 
 #### 선순위 큐와 후순위 큐 
 - 특정 트랜잭션이나 쿼리를 우선적으로 처리할 수 있는 기능 제공 
-- 먼저 시작된 트랜잭션 내에 속한 SQL을 빨리 처리 -> 해당 트랜잭션이 가지고 있던 락이 빨리 해제됨 -> 락 경합 낮춤 -> 전체적인 처리 성능을 향상시킬 수 있음 
+- 먼저 시작된 트랜잭션 내에 속한 SQL을 빨리 처리 -> 해당 트랜잭션이 가지고 있던 락이 빨리 해제됨 -> 락 경합 낮춤 -> 전체적인 처리 성능을 향상시킬 수 있음
+
 ![img_7.png](img_7.png)
 
 <br>
