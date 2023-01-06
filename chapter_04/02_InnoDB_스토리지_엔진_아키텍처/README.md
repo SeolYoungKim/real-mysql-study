@@ -88,7 +88,7 @@ InnoDB 스토리지 엔진은 MVCC 기술을 이용해 락을 걸지 않고 읽�
 - `serializable`격리 수준이 아니라면, 순수한 읽기(only select)작업은 다른 트랜잭션의 변경 작업과 관계 없이 항상 락을 대기하지 않고 바로 실행 됨 
 
 
-<img src="img_3.png" width="300">
+<img src="img_3.png" width="300"></img>
 
 - 특정 사용자가 update 실행 중임 + 아직 커밋 안했을 경우 
   - 해당 변경 트랜잭션이 다른 사용자의 select 작업을 방해하지 않음 
@@ -276,7 +276,7 @@ InnoDB 스토리지 엔진은 데이터 파일이 손상되거나, 서버가 시
 <br>
 
 #### LRU(Least Recently Used) 리스트
-<img src="img_4.png" width="300">
+<img src="img_4.png" width="300"></img>
 
 - 엄밀하게 LRU + MRU(Most Recently Used)가 결합된 형태 
   - `Old 서브리스트` : LRU
@@ -332,7 +332,7 @@ InnoDB 스토리지 엔진은 데이터 파일이 손상되거나, 서버가 시
   - 버퍼 풀의 메모리 공간만 늘리는 것은 캐시 기능만 향상시키는 것임<br/><br/>
 - 쓰기 버퍼링 기능까지 향상시키려면 InnoDB 버퍼 풀과 리두 로그와의 관계를 먼저 이해해야 함<br/><br/>
 
-<img src="img_5.png" width="300">
+<img src="img_5.png" width="300"></img>
 
 - 버퍼 풀은 다음과 같은 페이지들을 가지고 있음
   - 디스크에서 읽은 상태로 전혀 변경되지 않은 **클린 페이지**
@@ -452,7 +452,7 @@ InnoDB 스토리지 엔진은 데이터 파일이 손상되거나, 서버가 시
 
 A~E 까지의 더티 페이지를 디스크로 플러시 한다고 가정할 때 
 
-<img src="img_6.png" width="300">
+<img src="img_6.png" width="300"></img>
 
 - 실제 데이터 파일에 변경 내용을 기록하기 전에 더티 페이지들을 묶음
 - 이들을 **한 번의 디스크 쓰기**로 시스템 테이블 스페이스의 DoubleWirte 버퍼에 기록 
@@ -532,7 +532,7 @@ where SUBSYSTEM = 'transaction'
 
 #### 언두 테이블스페이스
 
-<img src="img_8.png" width="300">
+<img src="img_8.png" width="300"></img>
 
 - 하나의 언두 테이블 스페이스 : 1개 이상 128개 이하의 롤백 세그먼트를 가짐 <br/><br/>
 - 롤백 세그먼트 : 1개 이상의 언두 슬롯을 가짐 
